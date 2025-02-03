@@ -221,7 +221,7 @@ registry:
     # -- If true, enable persistent storage (ignored when using minio or S3)
     enabled: true
     # -- StorageClass for persistent volume
-    storageClass: managed-csi
+    storageClass: managed-csi-premium
     # -- Registry persistent volume size
     size: 20Gi
     # -- External S3 configuration (needed only if you don't enable minio) (see https://github.com/distribution/distribution/blob/main/docs/content/storage-drivers/s3.md)
