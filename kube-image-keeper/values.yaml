@@ -94,7 +94,7 @@ controllers:
       matchExpressions: []
   podMonitor:
     # -- Should a PodMonitor object be installed to scrape kuik controller metrics. For prometheus-operator (kube-prometheus) users.
-    create: false
+    create: true
     # -- Target scrape interval set in the PodMonitor
     scrapeInterval: 60s
     # -- Target scrape timeout set in the PodMonitor
