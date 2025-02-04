@@ -214,7 +214,7 @@ registry:
     # -- Registry image tag
     tag: "2.8"
   # -- Number of replicas for the registry pod
-  replicas: 1
+  replicas: 2
   persistence:
     # -- AccessMode for persistent volume
     #accessModes: ReadWriteOnce
