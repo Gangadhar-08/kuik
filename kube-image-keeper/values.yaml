@@ -214,13 +214,13 @@ registry:
     # -- Registry image tag
     tag: "2.8"
   # -- Number of replicas for the registry pod
-  replicas: 2
+  replicas: 1
   persistence:
     # -- AccessMode for persistent volume
     #accessModes: ReadWriteOnce
     accessModes: ReadWriteMany
     # -- If true, enable persistent storage (ignored when using minio or S3)
-    enabled: true
+    enabled: false
     # -- StorageClass for persistent volume
     storageClass: azurefile-csi-premium
     # -- Registry persistent volume size
