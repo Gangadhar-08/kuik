@@ -306,8 +306,7 @@ registry:
   # -- Security context for containers of the registry pod
   securityContext: {}
   # -- Node selector for the registry pod
-  nodeSelector: 
-    agentpool: "kuik"
+  nodeSelector: {}
   # -- Toleration for the registry pod
   tolerations: []
   # -- Set the PriorityClassName for the registry pod
