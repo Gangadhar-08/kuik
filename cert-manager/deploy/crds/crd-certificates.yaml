@@ -8,9 +8,9 @@ metadata:
     helm.sh/resource-policy: keep
   # END annotations {{- end }}
   labels:
-    app: '{{ template "cert-manager.name" . }}'
-    app.kubernetes.io/name: '{{ template "cert-manager.name" . }}'
-    app.kubernetes.io/instance: '{{ .Release.Name }}'
+    app: 'cert-manager'
+    app.kubernetes.io/name: 'cert-manager'
+    app.kubernetes.io/instance: 'cert-manager'
     # Generated labels {{- include "labels" . | nindent 4 }}
 spec:
   group: cert-manager.io
