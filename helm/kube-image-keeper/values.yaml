@@ -76,7 +76,15 @@ controllers:
       memory: "512Mi"
   webhook:
     # -- Don't enable image caching for pods scheduled into these namespaces
-    ignoredNamespaces: [monitoring]
+    ignoredNamespaces:
+      [
+        monitoring,
+        kube-system,
+        gke-managed-system,
+        gke-managed-volumepopulator,
+        kube-node-lease,
+        kube-public,
+      ]
     # -- Don't enable image caching if the image match the following regexes
     ignoredImages: []
     # -- Enable image caching only if the image matches the following regexes (only applies when not empty)
@@ -322,7 +330,7 @@ registry:
     maxUnavailable: ""
   serviceMonitor:
     # -- Should a ServiceMonitor object be installed to  scrape kuik registry metrics. For prometheus-operator (kube-prometheus) users.
-    create: true
+    create: false
     # -- Target scrape interval set in the ServiceMonitor
     scrapeInterval: 60s
     # -- Target scrape timeout set in the ServiceMonitor
