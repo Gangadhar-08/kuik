@@ -225,10 +225,10 @@ registry:
   replicas: 1
   persistence:
     # -- AccessMode for persistent volume
-    #accessModes: ReadWriteOnce
-    accessModes: ReadWriteMany
+    accessModes: ReadWriteOnce
+    #accessModes: ReadWriteMany
     # -- If true, enable persistent storage (ignored when using minio or S3)
-    enabled: false
+    enabled: true
     # -- StorageClass for persistent volume
     storageClass: azurefile-csi-premium
     # -- Registry persistent volume size
